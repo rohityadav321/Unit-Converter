@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div class="calc">
+        <h1 class="h1">Calculator</h1>
+        <form>
+            <input type="text" id="output"></br>
+            <input type="text" id="res">
+        </form>
+        <div class="table">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn" onclick="c()" value="C">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="back()" value="<">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert('*')" value="x">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="equal()" value="=">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(7)" value="7">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(8)" value="8">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(9)" value="9">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert('/')" value="/">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(4)" value="4">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(5)" value="5">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(6)" value="6">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert('-')" value="-">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(1)" value="1">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(2)" value="2">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert(3)" value="3">
+                        </td>
+                        <td rowspan="2">
+                            <input id="plus" type="button" class="btn" onclick="insert('+')" value="+">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="zero" type="button" class="btn" onclick="insert(0)" value="0">
+                        </td>
+                        <td>
+                            <input type="button" class="btn" onclick="insert('.')" value=".">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script>var text = document.getElementById("output");
+        var res = document.getElementById("res");
+/*        var enter = document.getElementById("btn");
+      enter.addEventListener("keyup", call);
+        function call(e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                var exp = text.value;
+                if (exp)
+                    res.value = eval(exp);
+
+
+            }
+        }*/
+        function insert(num) {
+            text.value = text.value + num;
+
+        }
+        function equal() {
+            var exp = text.value;
+            if (exp)
+                res.value = eval(exp);
+
+        }
+        function c() {
+            text.value = "";
+            res.value = "";
+
+        }
+        function back() {
+            var exp = text.value;
+            text.value = exp.substring(0, exp.length - 1);
+        }
+
+    </script>
+</body>
+
+</html>

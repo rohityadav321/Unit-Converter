@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Unit Converter</title>
+   <link rel="stylesheet" href="conv.css">
+   <script src="converter.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <header class="head">
+         <h1 id="name">mblite</h1>
+         <nav>
+               <ul><li><a href="converter.html">Unit converter</a></li>
+                  <li><a href="calc.html">Calculator</a></li>
+                  <li><a href="">Currency</a></li>
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+               </ul>      
+         </nav>
+      </header>
+
+      <form id="form">
+       <h1 class="unit">Unit Converter</h1>
+         <select name="select" id="property">
+            <option value="select">--select property--</option>
+            <option value="length">length</option>
+            <option value="weight">weight</option>
+            <option value="temperature">temperature</option>
+            <option value="pressure">pressure</option>
+         </select>
+         <br>
+         <input type="number" id="input" placeholder="input ">
+
+         <select id="unit">
+            <option value="submit">--select unit--</option>
+
+            <option id="m" value="meter">meter</option>
+            <option id="km" value="kilometer">kilometer</option>
+            <option id="in" value="inches">inches</option>
+            <option id="mi" value="miles">miles</option>
+
+         </select>
+
+         <div class="bar">=</div>
+         <input type="number" id="output" placeholder="result">
+         <select id="uni_t">
+            <option value="submit">--select unit--</option>
+
+            <option id="m_" value="meter">meter</option>
+            <option id="km_" value="kilometer">kilometer</option>
+            <option id="in_" value="inches">inches</option>
+            <option id="mi_" value="miles">miles</option>
+
+         </select>
+      </form>
+
+   </div>
+
+</body>
+
+</html>
+
